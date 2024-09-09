@@ -1,5 +1,8 @@
 def decrypt(text, shift):
     result = ""
+    
+    text = text.upper()
+
     for i in text:
         shiftedCode = ord(i) - shift
         if shiftedCode < 65:
@@ -8,4 +11,5 @@ def decrypt(text, shift):
     return result
 
 for i in range(26):
-    print("Shift " + str(i).ljust(2) +  " :" + decrypt("BSUOFODSBUVOGWZAWBMOY", i))
+    encryptedMessage = "bsuofodsbuvogwzawbmoy"
+    print("Shift " + str(i).ljust(2) +  " :" + decrypt(encryptedMessage, i))
